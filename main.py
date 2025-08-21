@@ -25,7 +25,7 @@ CONFIG_BUTTON_PIN = 27
 BARCODE_DIR = "/home/admin/Barcodes"
 SOUND_PATH = "/home/admin/Barcodes/sounds/{}.mp3"
 # Define files/folders to protect from deletion.
-FILES_TO_KEEP = ["sounds", "cron.log", "install guide barcode.txt", "main.py", "requirements.txt"]
+FILES_TO_KEEP = ["sounds", "cron.log", "install guide barcode.txt", "main.py", "requirements.txt", "install.sh"]
 
 
 # --- Barcode Rules (Original 16-Digit Format) ---
