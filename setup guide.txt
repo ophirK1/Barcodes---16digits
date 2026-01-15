@@ -3,9 +3,11 @@
 3. להתקין את הספריה Barcodes במיקום /home/admin
 4. פתיחת CMD
 5. התקנת הספריות של הקוד
-	א. sudo chmod +x /home/admin/Barcodes/setup.sh
-	ב. sudo /home/admin/Barcodes/setup.sh
-	ג. sudo chmod +x /home/admin/Barcodes/main.py
+א. sudo apt-get update
+ב. sudo apt-get install python3-pip
+ג. sudo pip install pyusb --break-system-packages
+ד. sudo apt install mpg321 -y
+ה. sudo chmod +x /home/admin/Barcodes/main.py
 6. התקנה של הפעלה באיתחול
 	א. sudo crontab -e
 		* 1 nano editor
@@ -18,12 +20,34 @@
 192.168.0.60\24
 והשערים האחרים
 192.168.0.XXX\24
+7. sudo nano /etc/asound.conf
+א. לרשום בקובץ
+pcm.!default {
+    type plug
+    slave.pcm "hw:Headphones"
+}
 
-7.העברה למצב Console
+ctl.!default {
+    type hw
+    card "Headphones"
+}
+
+8.לוודא שwireless אינטרנט כבוי
+9. להגביר סאונד עד הסוף
+10. העברה למצב Console
 	א. sudo raspi-config
 	ב. System Options 1
 	ג. S5 Boot
 	ד. Console
-8. אתחול
+10. אתחול
 	sudo reboot
+
+-------------
+PIN LAYOUT
+config button  - pins 13 and 14
+Gate pinout - Voltage pin 4
+GND pin 6
+GPIO pin 37
+-------------
+
 
